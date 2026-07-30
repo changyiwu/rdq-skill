@@ -15,8 +15,8 @@
 
 - [x] 盤點既有 RDQ Skill、題庫與需求規格卡模板
 - [x] 完成跨 Agent 專案初始化
-- [ ] 將平台專屬工具名稱改為能力導向描述
-- [ ] 建立四 Agent 共用的安裝與驗證流程
+- [x] 將平台專屬工具名稱改為能力導向描述
+- [x] 建立四 Agent 共用的安裝與驗證流程
 - [ ] 安裝到四個 Agent 並完成觸發、訪談與確認閘門測試
 
 ## 資料夾結構
@@ -30,6 +30,9 @@ rdq-skill/
 ├── README.md
 ├── LICENSE
 ├── .gitignore
+├── scripts/
+│   ├── install-four-agents.ps1
+│   └── validate-skill.ps1
 └── references/
     ├── question-bank.md
     └── spec-template.md
