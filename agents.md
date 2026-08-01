@@ -26,17 +26,20 @@ rdq-skill/
 ├── agents.md
 ├── handoff.md
 ├── CLAUDE.md
-├── SKILL.md
 ├── README.md
 ├── LICENSE
 ├── .gitignore
-├── scripts/
-│   ├── install-four-agents.ps1
-│   └── validate-skill.ps1
-└── references/
-    ├── question-bank.md
-    └── spec-template.md
+├── rdq/                        # Skill 本體（資料夾名 ＝ SKILL.md 的 name:）
+│   ├── SKILL.md
+│   └── references/
+│       ├── question-bank.md
+│       └── spec-template.md
+└── scripts/
+    ├── install-four-agents.ps1
+    └── validate-skill.ps1
 ```
+
+Skill 本體集中在 `rdq/`，與專案基礎建設分層——「整包複製 `rdq/`」就等於正確安裝，通用同步工具不必個別知道要排除 `.git/`、`README.md` 等檔案。
 
 ## 同步層級（本專案初始化至第 3 層級）
 

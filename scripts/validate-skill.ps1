@@ -7,7 +7,7 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 if ([string]::IsNullOrWhiteSpace($SkillRoot)) {
-    $SkillRoot = Split-Path -Parent $PSScriptRoot
+    $SkillRoot = Join-Path (Split-Path -Parent $PSScriptRoot) 'rdq'
 }
 
 $resolvedRoot = (Resolve-Path -LiteralPath $SkillRoot).Path
