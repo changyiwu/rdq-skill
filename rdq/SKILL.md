@@ -106,7 +106,7 @@ RDQ 是**所有執行型技能與 Agent 工作流程的前置需求層**。它�
 
 **環境已知掃描**——象限Ⅰ 不只擷取使用者說的話，還要掃描目前可讀的專案脈絡：
 
-- 專案 `AGENTS.md`／`agents.md`（目標、進度、跨 Agent 約定）
+- 專案 `AGENTS.md`／`AGENTS.md`（目標、進度、跨 Agent 約定）
 - `handoff.md`（其他 Agent 的進度）
 - Agent 專屬指令檔（例如 `CLAUDE.md`、`GEMINI.md`；只讀取共用藍圖未涵蓋的增量）
 - 當前資料夾現有檔案

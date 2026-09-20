@@ -54,7 +54,7 @@ AI 沒有做錯任何被交代的事。問題是：**有太多事，根本沒有
 - 不寫死 `AskUserQuestion`、`WebSearch` 等工具名稱。
 - 優先使用目前 Agent 的原生結構化提問、搜尋與瀏覽能力。
 - 原生結構化提問不可用時，退回編號文字問題。
-- 優先讀取 `AGENTS.md`／`agents.md` 與 `handoff.md`；Agent 專屬指令檔只補增量資訊。
+- 優先讀取 `AGENTS.md`／`AGENTS.md` 與 `handoff.md`；Agent 專屬指令檔只補增量資訊。
 - 交棒前盤點目前可用能力，不假設特定下游 Skill 已安裝。
 
 ---
@@ -91,7 +91,7 @@ rdq/
     └── spec-template.md
 ```
 
-README、LICENSE、Git metadata、`agents.md`、`handoff.md`、`CLAUDE.md` 與安裝腳本都留在來源專案，不會混進已安裝 Skill。
+README、LICENSE、Git metadata、`AGENTS.md`、`handoff.md`、`CLAUDE.md` 與安裝腳本都留在來源專案，不會混進已安裝 Skill。
 
 ### 驗證來源
 
@@ -193,7 +193,7 @@ rdq-skill/
 ├── scripts/
 │   ├── install-four-agents.ps1
 │   └── validate-skill.ps1
-├── agents.md
+├── AGENTS.md
 ├── handoff.md
 ├── CLAUDE.md
 ├── README.md
@@ -202,7 +202,7 @@ rdq-skill/
 
 `SKILL.md` 保留核心流程；題庫與規格卡細節放在 `references/`，只在需要時載入。安裝腳本只配送 runtime 必需檔案。
 
-Skill 本體集中在 `rdq/`，與專案基礎建設（README、LICENSE、`agents.md`、`handoff.md`、`CLAUDE.md`、`scripts/`）分層。這樣「整個資料夾複製」就等於正確安裝，通用的技能同步工具不必個別知道哪些檔案該排除；資料夾名 `rdq` 也與 `SKILL.md` 的 `name:` 一致。
+Skill 本體集中在 `rdq/`，與專案基礎建設（README、LICENSE、`AGENTS.md`、`handoff.md`、`CLAUDE.md`、`scripts/`）分層。這樣「整個資料夾複製」就等於正確安裝，通用的技能同步工具不必個別知道哪些檔案該排除；資料夾名 `rdq` 也與 `SKILL.md` 的 `name:` 一致。
 
 ---
 
