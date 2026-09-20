@@ -22,10 +22,10 @@ if ($LASTEXITCODE -ne 0) {
 if ([string]::IsNullOrWhiteSpace($StagingRoot)) {
     $profilePath = [Environment]::GetFolderPath('UserProfile')
     $targetRoots = [ordered]@{
-        ClaudeCode = Join-Path $profilePath '.claude\skills'
-        Codex       = Join-Path $profilePath '.agents\skills'
-        OpenCode    = Join-Path $profilePath '.config\opencode\skills'
-        AntiGravity = Join-Path $profilePath '.gemini\config\skills'
+        ClaudeCode = Join-Path $profilePath '.claude/skills'
+        Codex       = Join-Path $profilePath '.agents/skills'
+        OpenCode    = Join-Path $profilePath '.config/opencode/skills'
+        AntiGravity = Join-Path $profilePath '.gemini/config/skills'
     }
 }
 else {
@@ -47,8 +47,8 @@ else {
 
 $runtimeFiles = @(
     'SKILL.md',
-    'references\question-bank.md',
-    'references\spec-template.md'
+    'references/question-bank.md',
+    'references/spec-template.md'
 )
 
 foreach ($agentName in $selectedAgents) {
@@ -74,9 +74,9 @@ foreach ($agentName in $selectedAgents) {
 
     Copy-Item -LiteralPath (Join-Path $sourceRoot 'SKILL.md') `
         -Destination (Join-Path $destination 'SKILL.md') -Force
-    Copy-Item -LiteralPath (Join-Path $sourceRoot 'references\question-bank.md') `
+    Copy-Item -LiteralPath (Join-Path $sourceRoot 'references/question-bank.md') `
         -Destination (Join-Path $destinationReferences 'question-bank.md') -Force
-    Copy-Item -LiteralPath (Join-Path $sourceRoot 'references\spec-template.md') `
+    Copy-Item -LiteralPath (Join-Path $sourceRoot 'references/spec-template.md') `
         -Destination (Join-Path $destinationReferences 'spec-template.md') -Force
 
     foreach ($runtimeFile in $runtimeFiles) {

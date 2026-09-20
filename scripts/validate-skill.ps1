@@ -20,8 +20,8 @@ function Add-Failure {
 
 $requiredFiles = @(
     'SKILL.md',
-    'references\question-bank.md',
-    'references\spec-template.md'
+    'references/question-bank.md',
+    'references/spec-template.md'
 )
 
 foreach ($relativePath in $requiredFiles) {
@@ -119,8 +119,8 @@ if (Test-Path -LiteralPath $skillPath -PathType Leaf) {
 
 $runtimePaths = @(
     (Join-Path $resolvedRoot 'SKILL.md'),
-    (Join-Path $resolvedRoot 'references\question-bank.md'),
-    (Join-Path $resolvedRoot 'references\spec-template.md')
+    (Join-Path $resolvedRoot 'references/question-bank.md'),
+    (Join-Path $resolvedRoot 'references/spec-template.md')
 )
 $platformBoundPatterns = @(
     'AskUserQuestion',
@@ -149,7 +149,7 @@ foreach ($runtimePath in $runtimePaths) {
     }
 }
 
-$questionBankPath = Join-Path $resolvedRoot 'references\question-bank.md'
+$questionBankPath = Join-Path $resolvedRoot 'references/question-bank.md'
 if (Test-Path -LiteralPath $questionBankPath -PathType Leaf) {
     $questionBankText = [System.IO.File]::ReadAllText(
         $questionBankPath,

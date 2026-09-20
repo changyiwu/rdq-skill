@@ -66,19 +66,19 @@ AI 沒有做錯任何被交代的事。問題是：**有太多事，根本沒有
 先預覽，不寫入任何 Agent 目錄：
 
 ```powershell
-.\scripts\install-four-agents.ps1 -WhatIf
+./scripts/install-four-agents.ps1 -WhatIf
 ```
 
 確認後安裝四個 Agent：
 
 ```powershell
-.\scripts\install-four-agents.ps1 -Force
+./scripts/install-four-agents.ps1 -Force
 ```
 
 只安裝單一 Agent：
 
 ```powershell
-.\scripts\install-four-agents.ps1 -Agent Codex -Force
+./scripts/install-four-agents.ps1 -Agent Codex -Force
 ```
 
 腳本只複製 runtime 必需內容：
@@ -96,7 +96,7 @@ README、LICENSE、Git metadata、`AGENTS.md`、`handoff.md`、`CLAUDE.md` 與�
 ### 驗證來源
 
 ```powershell
-.\scripts\validate-skill.ps1
+./scripts/validate-skill.ps1
 ```
 
 驗證項目包含必要檔案、UTF-8 BOM、YAML frontmatter、名稱、平台硬綁定、參考檔連結與 `SKILL.md` 行數。
